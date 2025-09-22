@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+</head>
+<body id="jsBody">
+    <h1>JS Practice Page</h1>
+    <button id="clickMe">Click Me!</button>
+
+    <script>
+        let clickCount = 0;
+
+        document.getElementById('clickMe').addEventListener('click', function() {
+            clickCount++;
+
+            if (clickCount == 1) {
+                document.getElementById('jsBody').style.background = 'red';
+            } else if (clickCount == 2) {
+                document.getElementById('jsBody').style.background = 'yellow';
+            } else if (clickCount == 3) {
+                document.getElementById('jsBody').style.background = 'blue';
+            } else {
+                document.getElementById('jsBody').style.background = 'white';
+                clickCount = 0; 
+            }
+        });
+    </script>
+</body>
+</html>
